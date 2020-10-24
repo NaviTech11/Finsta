@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+
 function WelcomeScreen() {
     return (
         <View>
@@ -7,5 +9,7 @@ function WelcomeScreen() {
         </View>
     )
 }
+
+
 
 export default WelcomeScreen
