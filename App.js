@@ -1,12 +1,14 @@
 
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import WelcomeScreen from './app/screens/WelcomeScreen';
+import Welcome from './app/screens/WelcomeScreen'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Finsta</Text>
-      <StatusBar style="auto" />
+      <Messenger />
+      
     </View>
   );
 }
