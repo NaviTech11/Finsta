@@ -5,7 +5,7 @@ import React from 'react'
 function WelcomeScreen() {
     return (
         <View>
-            <Text>FINSTA</Text>
+            <Text>FINSTAGRAM</Text>
         </View>
     )
 }
