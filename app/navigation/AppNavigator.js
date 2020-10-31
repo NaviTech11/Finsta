@@ -1,10 +1,12 @@
+import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
-import AccountNavigator from "./AccountNavigator";
 import FeedNavigator from "./FeedNavigator";
-import ListingEditScreen from "../screens/ListingEditScreen";
-import NewListingButton from "./NewListingButton";
+import MessagesNavigator from "./MessagesNavigator";
+import NewPostButton from "./NewPostButton";
+import ProfileNavigator from "./ProfileNavigator";
+import PostEditScreen from "../screens/PostEditScreen";
 import routes from "./routes";
 
 const Tab = createBottomTabNavigator();
@@ -21,12 +23,21 @@ const AppNavigator = () => (
       }}
     />
     <Tab.Screen
-      name="ListingEdit"
-      component={ListingEditScreen}
+      name="Messages"
+      component={MessagesNavigator}
+      options={{
+        tabBarIcon: ({ color, size }) => (
+          <MaterialCommunityIcons name="message" color={color} size={size} />
+        ),
+      }}
+    />
+    <Tab.Screen
+      name="PostEdit"
+      component={PostEditScreen}
       options={({ navigation }) => ({
         tabBarButton: () => (
-          <NewListingButton
-            onPress={() => navigation.navigate(routes.LISTING_EDIT)}
+          <NewPostButton
+            onPress={() => navigation.navigate(routes.POST_EDIT)}
           />
         ),
         tabBarIcon: ({ color, size }) => (
@@ -38,9 +49,10 @@ const AppNavigator = () => (
         ),
       })}
     />
+    
     <Tab.Screen
-      name="Account"
-      component={AccountNavigator}
+      name="Profile"
+      component={ProfileNavigator}
       options={{
         tabBarIcon: ({ color, size }) => (
           <MaterialCommunityIcons name="account" color={color} size={size} />

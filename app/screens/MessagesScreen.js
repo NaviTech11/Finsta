@@ -2,10 +2,10 @@ import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import Text from '../components/Text';
 
-function PostEdit(props) {
+function MessagesScreen(props) {
   return (
     <View style={styles.container}>
-      <Text>"Post edit screen"</Text>
+      <Text>"Messages"</Text>
     </View>
   );
 }
@@ -14,4 +14,4 @@ const styles = StyleSheet.create({
   container: {}
 });
 
-export default PostEdit;
+export default MessagesScreen;
