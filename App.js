@@ -1,23 +1,13 @@
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
 
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import WelcomeScreen from './app/screens/WelcomeScreen';
-import Welcome from './app/screens/WelcomeScreen'
+import navigationTheme from "./app/navigation/navigationTheme";
+import AppNavigator from "./app/navigation/AppNavigator";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Messenger />
-      
-    </View>
+    <NavigationContainer theme={navigationTheme}>
+      <AppNavigator />
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
